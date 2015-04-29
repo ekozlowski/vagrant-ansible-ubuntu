@@ -1,12 +1,7 @@
 {
-   "full_name": "Edward Kozlowski",
-   "email": "ekozlowski1@gmail.com",
-   "github_username": "ekozlowski",
-   "project_name": "Ed",
-   "repo_name": "Eds repo",
-   "project_short_description": "Eds description",
-   "release_date": "2015-4-28",
-   "year": "2015",
-   "version":"0.0.0"
-
+   "box_name": "vagrant",
+   "box_hostname": "vagrant.local",
+   "server_group_name": "vagrantservers",
+   "cpus": "2",
+   "memory": "2048"
 }
