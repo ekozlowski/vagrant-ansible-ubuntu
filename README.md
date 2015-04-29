@@ -1,5 +1,3 @@
-# vagrant-ansible-ubuntu
-
 Vagrant, Ansible and Ubuntu Cookiecutter Experiment
 ===================================================
 
