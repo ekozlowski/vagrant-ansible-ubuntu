@@ -1,0 +1,40 @@
+---
+- name: Bring Up Nginx Server
+  hosts: nginxservers
+
+  roles:
+    - role: base-ubuntu
+
+  tasks:
+  - name: Install apt packages for Nginx server
+    apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=3600
+    with_items:
+      - nginx
+      - curl
+      - vim
+      - python-dev
+      - python-pip
+    sudo: true
+  - name: Install pip packages for python Flask app
+    pip: name={{ item }} state=present
+    with_items:
+      - uwsgi
+      - Flask
+      - locustio
+    sudo: true
+  - name: copy site file
+    copy: src=./files/mysite.py dest=/home/vagrant/mysite.py
+  - name: copy nginx config
+    copy: src=./files/nginx.conf dest=/home/vagrant/nginx.conf
+    sudo: true
+  - name: link site config
+    file: state=link src=/home/vagrant/nginx.conf path=/etc/nginx/sites-enabled/mysite.conf
+    sudo: true
+    notify: restart_nginx
+  - name: start uwsgi
+    command: uwsgi --single-interpreter --enable-threads --http 127.0.0.1:9001 -w mysite:app
+  handlers:
+    - name: restart_nginx
+      service: name=nginx state=restarted
+      sudo: true
+
