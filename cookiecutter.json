@@ -3,5 +3,6 @@
    "box_hostname": "vagrant.local",
    "server_group_name": "vagrantservers",
    "cpus": "2",
-   "memory": "2048"
+   "memory": "2048",
+   "repo_name": "mycoolrepo"
 }
