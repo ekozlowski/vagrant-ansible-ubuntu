@@ -1,7 +1,7 @@
 ---
 - name: {{cookiecutter.project_name}}
   hosts: {{cookiecutter.server_group}}
-
+  become: true
   #roles:
   #  - role: test_role
 
