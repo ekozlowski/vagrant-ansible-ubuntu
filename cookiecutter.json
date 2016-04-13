@@ -1,6 +1,6 @@
 {
   "project_name": "foo-project",
-  "server_group": "test_server_group"
+  "server_group": "test_server_group",
   "full_name": "Edward Kozlowski",
 	"email": "ekozlowski1@gmail.com",
 	"role_name": "Super.Role",
