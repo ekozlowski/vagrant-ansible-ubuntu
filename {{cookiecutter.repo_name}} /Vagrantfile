@@ -4,7 +4,7 @@
 VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |v|
-  v.customize ["modifyvm", :id, "--cpus", "{{ cookiecuttter.cpus }}", "--memory", "{{ cookiecuttter.memory }}"]
+  v.customize ["modifyvm", :id, "--cpus", "{{ cookiecutter.cpus }}", "--memory", "{{ cookiecutter.memory }}"]
 end
   config.vm.define "{{ cookiecutter.box_name }}" do |{{ box_name }}|
     {{ box_name }}.vm.network "private_network", ip: "192.168.50.10"
