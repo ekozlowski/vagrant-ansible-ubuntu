@@ -21,7 +21,7 @@ end
     # Uncomment below to see debug output.
     #ansible.verbose = 'vvv'
     ansible.groups = {
-        "{{ cookiecutter.server_group_name }}" => ["{{ cookiecutter.box_name }}"]
+        "{{ cookiecutter.server_group }}" => ["{{ cookiecutter.box_name }}"]
     }
   end
 end
