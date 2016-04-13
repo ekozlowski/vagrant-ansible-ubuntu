@@ -1,12 +1,12 @@
 ---
-- name: {{ project_name }}
-  hosts: {{ server_group }}
+- name: "{{ project_name }}"
+  hosts: "{{ server_group }}"
 
   #roles:
   #  - role: test_role
 
   tasks:
   - name: Update apt
-    apt: 
+    apt:
       update_cache: true
       cache_valid_time: 3600
