@@ -1,9 +1,11 @@
 {
-   "project_name": "my_cool_project",
-   "box_name": "vagrant",
-   "box_hostname": "vagrant.local",
-   "server_group_name": "vagrantservers",
-   "cpus": "2",
-   "memory": "2048",
-   "repo_name": "mycoolrepo"
+  "full_name": "Edward Kozlowski",
+	"email": "ekozlowski1@gmail.com",
+	"role_name": "Super.Role",
+  "github_user": "ekozlowski",
+	"repo_name": "ansible-super-role",
+	"short_description": "Vagrant Ansible and Ubuntu",
+	"release_date": "2016-04-12",
+	"year": "2016",
+	"version": "0.1.0"
 }
