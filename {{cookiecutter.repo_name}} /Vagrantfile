@@ -6,7 +6,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |v|
   v.customize ["modifyvm", :id, "--cpus", "{{ cookiecutter.cpus }}", "--memory", "{{ cookiecutter.memory }}"]
 end
-  config.vm.define "{{ cookiecutter.box_name }}" do |{{ box_name }}|
+  config.vm.define "{{ cookiecutter.box_name }}" do |{{ cookiecutter.box_name }}|
     {{ box_name }}.vm.network "private_network", ip: "192.168.50.10"
     {{ box_name }}.vm.network "forwarded_port", guest: 25565, host: 25565
     {{ box_name }}.vm.hostname = "{{ cookiecutter.box_hostname }}"
