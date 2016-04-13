@@ -1,6 +1,6 @@
 ---
-- name: "{{ project_name }}"
-  hosts: "{{ server_group }}"
+- name: {{project_name}}
+  hosts: {{server_group}}
 
   #roles:
   #  - role: test_role
