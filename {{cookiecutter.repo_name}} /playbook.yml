@@ -6,7 +6,12 @@
   #  - role: test_role
 
   tasks:
-  - name: Update apt
+  - name: Install Base apt packages
     apt:
       update_cache: true
       cache_valid_time: 3600
+      name: { item }
+    with_items:
+      - python-pip
+      - postfix
+      - mutt
