@@ -1,15 +1,11 @@
 {
-  "project_name": "foo-project",
-  "server_group": "test_server_group",
+  "project_name": "project-awesome",
+  "server_group": "test_server_group_for_ansible_playbooks",
   "full_name": "Edward Kozlowski",
-	"email": "ekozlowski1@gmail.com",
+  "email": "ekozlowski1@gmail.com",
   "cpus": "2",
   "memory": "2048",
   "box_name": "edscoolbox",
   "box_hostname": "edscoolbox.khome.com",
-	"repo_name": "foo-project",
-	"short_description": "Vagrant Ansible and Ubuntu",
-	"release_date": "2016-04-12",
-	"year": "2016",
-	"version": "0.1.0"
+  "repo_name": "foo-project",
 }
